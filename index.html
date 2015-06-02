@@ -17,24 +17,25 @@
         <!--[if lt IE 9]>
         <script src="lib/js/html5shiv.js"></script>
         <![endif]-->
+
+    <style type="text/css">
+      .reset {
+        color: black;
+      }
+    </style>
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
-      <section id="slide-title" data-state="bluesky">
+      <section id="slide-title">
         <h1>Git for scientists</h1>
         <p>
           <div class="attribution">
-          <a href="http://www.inundata.org/">Karthik Ram </a><br />
-          @_inundata
+          <span class="reset">Originally by:</span> <a href="http://www.inundata.org/">Karthik Ram </a><br />          
           </div>
           <div class="attribution">
-          <a href="http://www.yoavram.com/">Yoav Ram </a><br />
-          @yoavram
-          </div>
-          <div class="attribution">
-          <a href="http://py4life.github.io/">Py4Life </a><br />
-          @__Py4Life__
+          <span class="reset">Modified by:</span> <a href="http://www.yoavram.com/">Yoav Ram </a>
+          <span class="reset">for</span> <a href="http://py4life.github.io/">Py4Life </a><br />
           </div>
         </p>
       </section>
@@ -58,19 +59,19 @@
 </section>
 
 <!-- .......................................... -->
-<section id="Transparency" data-markdown data-state="bluesky">
+<section id="Benefits" data-markdown >
     <script type="text/template">
-        ## Uses of version control
-          * An amazing backup
-          * promotes transparency
-          * facilitates reproducibility
-          * faster recovery from errors
-          * easier collaboration
+        ## Benefits of version control
+          * Amazing backup
+          * Promotes transparency
+          * Facilitates reproducibility
+          * Faster recovery from errors
+          * Easier collaboration
     </script>
 </section>
 
 <!-- .......................................... -->
-<section id="benefits_for_you" data-markdown data-state="bluesky">
+<section id="Uses" data-markdown>
     <script type="text/template">
         ## Uses of version control
           * Writing papers (either alone or collaboratively)
@@ -82,9 +83,10 @@
 </section>
 
 <!-- .......................................... -->
-<section id="not_dropobox" data-markdown data-state="bluesky">
+<section id="not_dropobox" data-markdown >
     <script type="text/template">
-        This is much more robust than a system like Dropbox <br>
+        This is much more robust than a system like Dropbox.
+
         You decide when to version and what to version.
     </script>
 </section>
@@ -100,7 +102,7 @@
 
 
 <!-- .......................................... -->
-<section id="how_it_works" data-markdown data-state="bluesky">
+<section id="how_it_works" data-markdown >
     <script type="text/template">
          ## What is Git?
     </script>
@@ -115,15 +117,17 @@
 </section>
 
 <!-- .......................................... -->
-<section id="whatgoesintoagitrepo">
-  <h2>A git repository is two things</h2>
-  <ul>
-    <li>A <b>key value store</b> maps checksum &rarr; file</li>
-    <li><b>A tree</b>: How these checksums correspond to versions and branches.</li>
-  </ul>
+<section id="whatisarepo" data-markdown>
+    <script type="text/template">
+    ## A git repository is two things
+    
+    - A **key-value store** maps checksum &rarr; file
+    - **A tree**: How these checksums correspond to versions and branches
+    
 
-  <small>* Checksum is a signature of the data.</small>
-  </section>
+    BTW, Checksum is a signature of the data
+  </script>
+</section>
 
   <!-- .......................................... -->
 <section id="a_tree" data-markdown>
@@ -149,7 +153,7 @@
     </script>
 </section>
 <!-- ~~~~~~~~~~~~~ Start Chacon  ~~~~~~~~~~~~~~~~~~ -->
-<section id="how_git_works" data-markdown data-state="bluesky">
+<section id="how_git_works" data-markdown>
     <script type="text/template">
         # What happens underneath the hood
     </script>
@@ -296,54 +300,17 @@
 <!-- ~~~~~~~~~~~~~ End Chacon, damn that was long  ~~~~~~~~~~~~~~~~~~ -->
 
 <!-- .......................................... -->
-<section id="lets_start" data-markdown data-state="bluesky">
+<section id="lets_start" data-markdown >
     <script type="text/template">
         ## Lets start using Git!
     </script>
 </section>
 
+
 <!-- .......................................... -->
-<section id="configuration" data-markdown>
+<section id="try_git" data-markdown>
     <script type="text/template">
-        ## Configuration
-        <br><br>
-        ```
-        git config --global user.name "Karthik Ram"
-        git config --global user.email "kram@berkeley.edu"
-        git config --global color.ui "auto"
-        git config --global core.editor "nano" 
-        ```
-<p class="small" align="left">See your current setings</p>
-```
-git config --list
-git config user.name
-```
-    </script>
-</section> 
-
-
-<!-- .......................................... -->
-<section id="even-simpler-workflow-ice-cream">
-     <h2>Git workflow</h2>
-<ol>
- <li class="fragment"> edit files (Grab tub of ice cream)</li>
- <li class="fragment"> Stage the changes and commit  (run to cashier and pay for it)</li>
-</ol>
-</section>
-
-<!-- .......................................... -->
-<section id="even-simpler-workflow" data-markdown>
-    <script type="text/template">
-      ## An even simpler workflow
-      1. edit files (Use your favorite editor)
-      2. Stage the changes and commit  (`git commit -m "commit message"`)
-    </script>
-</section>
-
-<!-- .......................................... -->
-<section id="create_new_folder" data-markdown>
-    <script type="text/template">
-    ## Try Git online!
+    ## Try Git online
     
     You can do a quick Git tutorial online at Code School's and GitHub's [Try Git](https://try.github.io/).
     <br>
@@ -351,16 +318,66 @@ git config user.name
     </script>
 </section>
 
+
+<!-- .......................................... -->
+<section id="even-simpler-workflow-ice-cream">
+     <h2>Git workflow</h2>
+<ol>
+ <li class="fragment"> Edit files (Grab tub of ice cream)</li>
+ <li class="fragment"> Commit the changes (run to cashier and pay for it)</li>
+</ol>
+</section>
+
+<!-- .......................................... -->
+<section id="even-simpler-workflow" data-markdown>
+    <script type="text/template">
+      ## An even simpler workflow
+      1. Edit files (Use your [favorite editor]())
+      2. Stage the changes and commit  (`git commit -m "commit message"`)
+    </script>
+</section>
+
 <!-- .......................................... -->
 <section id="hosting_options" data-markdown>
 <script type="text/template">
-### Where to host your code
+## Where to host your code
 
 * **GitHub.com**: offers 5 free private repositories for students (need to ask for it at [github.com/edu](http://github.com/edu))
 * **GitLab.com**: unlimited free private hosting for everyone
 * **Bitbucket.com**: unlimited free private hosting for students
 
 * All three offer unlimited public repositories
+</script>
+</section>
+
+<!-- .......................................... -->
+<section id="install" data-markdown>
+  <script type="text/template">
+## Install git
+
+You can install git using instruction from [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), 
+and then set it up using instructions from [here](https://help.github.com/articles/set-up-git/).
+
+When you have questions on how to do stuff with git just ask your [favorite search engine](https://duckduckgo.com/).
+So many people use git that you are likely to find the answers very quickly.
+
+</script>
+</section>
+
+
+<!-- .......................................... -->
+<section id="GUI" data-markdown>
+  <script type="text/template">
+## GUIs
+
+You can use a GUI if you don't want to work with the command line or terminal.
+
+- GitHub's GUI (works with any host, not just GitHub)
+  - [Windows](https://windows.github.com/) 
+  - [Mac](https://mac.github.com/)
+- Mobile - search the app stores
+- Other GUIs - see list on the [git website](https://www.git-scm.com/downloads/guis)
+
 </script>
 </section>
 
@@ -375,24 +392,18 @@ git config user.name
 </section>
 
 <!-- .......................................... -->
-<section id="GUI" data-state="bluesky">
-<h3>GUIs</h3>
+<section id="things-i-didnt-cover" data-markdown>
+      <script type="text/template">
 
-You can use a GUI if you don't want to work with the command line / terminal.
+## Other things you can do
 
-<ul>
-<li>GitHub's GUI for [Windows](https://windows.github.com/) and [Mac](https://mac.github.com/) (works with any host, not just GitHub). There's even an Android app.</li>
-<li>Other GUIs - see [list on SCM website](https://www.git-scm.com/downloads/guis)</li>
-</ul>
-</section>
+- Collaborate with your co-authors
+- Use various free/paid tools including GUIs
+- Manage everything with git
+- Check the course repo on GitHub: [Py4Life/TAU2015](https://github.com/Py4Life/TAU2015),
+- and even clone it: `git clone https://github.com/Py4Life/TAU2015.git`
 
-<section id="things-i-didnt-cover" data-state="bluesky">
-<h3>Other things you can do</h3>
-<ul>
-<li>Collaborate with your co-authors</li>
-<li>Use various free/paid tools including GUIs</li>
-<li>Manage everything with git</li>
-</ul>
+</script>
 </section>
 
 
