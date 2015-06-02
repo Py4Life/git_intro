@@ -1,6 +1,6 @@
 # Git for Scientists
 
-[View the presenation online]((http://py4life.github.io/git_intro).
+[View the presenation online](http://py4life.github.io/git_intro).
 
 Introduction to git for scientists, first used as a 15 min talk in Tel-Aviv University, 3 June 2015, in the [Py4Life course](https://py4life.github.io/TAU2015).
 
